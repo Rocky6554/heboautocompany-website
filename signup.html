@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account — Hebo Auto</title>
+  <link rel="stylesheet" href="auth.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="auth-page">
+
+    <!-- Left brand panel -->
+    <div class="auth-brand">
+      <div class="ab-inner">
+        <a href="index.html" class="ab-logo">
+          <div class="logo-icon">HA</div>
+          <div>
+            <span class="lw-main">HEBO AUTO</span>
+            <span class="lw-sub">Company Limited</span>
+          </div>
+        </a>
+        <div class="ab-copy">
+          <h2>Join the Hebo Auto Family</h2>
+          <p>Create your account to manage service bookings, track your vehicle history, and get exclusive updates.</p>
+        </div>
+        <div class="ab-perks">
+          <div class="perk"><span class="perk-ico">✓</span> Book services online</div>
+          <div class="perk"><span class="perk-ico">✓</span> Track your vehicle history</div>
+          <div class="perk"><span class="perk-ico">✓</span> Exclusive member offers</div>
+          <div class="perk"><span class="perk-ico">✓</span> Fast parts ordering</div>
+        </div>
+        <div class="ab-bg-text">HEBO</div>
+      </div>
+    </div>
+
+    <!-- Right form panel -->
+    <div class="auth-form-panel">
+      <div class="afp-inner">
+        <div class="afp-head">
+          <h1>Create Account</h1>
+          <p>Already have an account? <a href="login.html">Sign In</a></p>
+        </div>
+
+        <form id="signupForm" class="aform" novalidate>
+
+          <div class="af-row">
+            <div class="af-field">
+              <label for="sfname">First Name *</label>
+              <input type="text" id="sfname" placeholder="John" autocomplete="given-name" required/>
+            </div>
+            <div class="af-field">
+              <label for="slname">Last Name *</label>
+              <input type="text" id="slname" placeholder="Doe" autocomplete="family-name" required/>
+            </div>
+          </div>
+
+          <div class="af-field">
+            <label for="semail">Email Address *</label>
+            <input type="email" id="semail" placeholder="john@example.com" autocomplete="email" required/>
+          </div>
+
+          <div class="af-field">
+            <label for="sphone">Phone Number *</label>
+            <input type="tel" id="sphone" placeholder="+234 ..." autocomplete="tel" required/>
+          </div>
+
+          <div class="af-field">
+            <label for="svehicle">Vehicle (optional)</label>
+            <input type="text" id="svehicle" placeholder="e.g. Toyota Camry 2019"/>
+          </div>
+
+          <div class="af-field">
+            <label for="spassword">Password *</label>
+            <div class="pw-wrap">
+              <input type="password" id="spassword" placeholder="Min. 8 characters" autocomplete="new-password" required/>
+              <button type="button" class="pw-toggle" data-target="spassword" aria-label="Toggle password">👁</button>
+            </div>
+            <div class="pw-strength" id="pwStrength">
+              <div class="pws-bar"><div class="pws-fill" id="pwsFill"></div></div>
+              <span id="pwsLabel"></span>
+            </div>
+          </div>
+
+          <div class="af-field">
+            <label for="sconfirm">Confirm Password *</label>
+            <div class="pw-wrap">
+              <input type="password" id="sconfirm" placeholder="Re-enter password" autocomplete="new-password" required/>
+              <button type="button" class="pw-toggle" data-target="sconfirm" aria-label="Toggle confirm">👁</button>
+            </div>
+          </div>
+
+          <div class="af-check">
+            <input type="checkbox" id="sagree" required/>
+            <label for="sagree">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+          </div>
+
+          <button type="submit" class="btn-submit" id="signupBtn">Create Account →</button>
+
+          <div class="af-msg af-err" id="signupErr"></div>
+          <div class="af-msg af-ok"  id="signupOk"></div>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>

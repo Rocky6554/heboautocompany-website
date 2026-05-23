@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Account — Hebo Auto</title>
+  <link rel="stylesheet" href="auth.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="dash-body">
+
+  <!-- Dashboard nav -->
+  <header class="dash-header">
+    <div class="dash-nav">
+      <a href="index.html" class="ab-logo">
+        <div class="logo-icon">HA</div>
+        <div>
+          <span class="lw-main">HEBO AUTO</span>
+          <span class="lw-sub">Company Limited</span>
+        </div>
+      </a>
+      <div class="dash-nav-right">
+        <span class="dash-welcome" id="dashWelcome">Welcome back</span>
+        <button class="btn-logout" id="logoutBtn">Sign Out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="dash-main">
+
+    <!-- Profile card -->
+    <div class="dash-card dash-profile">
+      <div class="dp-avatar" id="dpAvatar">?</div>
+      <div class="dp-info">
+        <h2 id="dpName">—</h2>
+        <p id="dpEmail">—</p>
+        <p id="dpPhone">—</p>
+        <p id="dpVehicle" class="dp-vehicle">—</p>
+      </div>
+      <button class="btn-edit" id="editProfileBtn">✏️ Edit Profile</button>
+    </div>
+
+    <!-- Stats row -->
+    <div class="dash-stats">
+      <div class="dstat">
+        <span class="dstat-n" id="statDate">—</span>
+        <span class="dstat-l">Member Since</span>
+      </div>
+      <div class="dstat">
+        <span class="dstat-n">0</span>
+        <span class="dstat-l">Services Booked</span>
+      </div>
+      <div class="dstat">
+        <span class="dstat-n">0</span>
+        <span class="dstat-l">Parts Ordered</span>
+      </div>
+      <div class="dstat">
+        <span class="dstat-n dstat-green">Active</span>
+        <span class="dstat-l">Account Status</span>
+      </div>
+    </div>
+
+    <!-- Quick actions -->
+    <div class="dash-section">
+      <h3>Quick Actions</h3>
+      <div class="dash-actions">
+        <a href="index.html#contact" class="da-btn">
+          <span>🔧</span>
+          <strong>Book a Service</strong>
+          <p>Schedule your next visit</p>
+        </a>
+        <a href="index.html#products" class="da-btn">
+          <span>📦</span>
+          <strong>Order Parts</strong>
+          <p>Browse our catalogue</p>
+        </a>
+        <a href="index.html#contact" class="da-btn">
+          <span>📞</span>
+          <strong>Contact Us</strong>
+          <p>Speak to our team</p>
+        </a>
+        <button class="da-btn" id="editProfileBtn2">
+          <span>👤</span>
+          <strong>Update Profile</strong>
+          <p>Edit your details</p>
+        </button>
+      </div>
+    </div>
+
+    <!-- Recent activity placeholder -->
+    <div class="dash-section">
+      <h3>Recent Activity</h3>
+      <div class="dash-empty">
+        <span>📋</span>
+        <p>No activity yet. Book your first service to get started.</p>
+        <a href="index.html#services" class="btn-submit" style="display:inline-block;margin-top:12px;text-decoration:none">Explore Services →</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Edit profile modal -->
+  <div class="modal-overlay" id="editModal">
+    <div class="modal modal-lg">
+      <button class="modal-close" id="editModalClose">✕</button>
+      <h3>Edit Profile</h3>
+      <form id="editForm" class="aform" style="margin-top:20px" novalidate>
+        <div class="af-row">
+          <div class="af-field">
+            <label>First Name</label>
+            <input type="text" id="efname" placeholder="First name"/>
+          </div>
+          <div class="af-field">
+            <label>Last Name</label>
+            <input type="text" id="elname" placeholder="Last name"/>
+          </div>
+        </div>
+        <div class="af-field">
+          <label>Phone Number</label>
+          <input type="tel" id="ephone" placeholder="+234 ..."/>
+        </div>
+        <div class="af-field">
+          <label>Vehicle</label>
+          <input type="text" id="evehicle" placeholder="e.g. Toyota Camry 2019"/>
+        </div>
+        <button type="submit" class="btn-submit">Save Changes →</button>
+        <div class="af-msg af-ok" id="editOk" style="margin-top:12px"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>
